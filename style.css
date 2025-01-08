@@ -1,0 +1,145 @@
+.profile-image {
+    width: 350px;  /* Mengatur lebar foto */
+    height: 350px; /* Mengatur tinggi foto */
+    object-fit: cover; /* Memastikan foto tetap proporsional */
+    border-radius: 50%; /* Membuat foto menjadi lingkaran */
+    border: 5px solid #fff; /* Menambah border putih */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Menambah shadow */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 576px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+.project-card {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+/* Tech stack badges */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-stack .badge {
+    padding: 0.5rem 1rem;
+    font-weight: normal;
+}
+
+/* Custom button styles */
+.btn-outline-primary:focus {
+    box-shadow: none;
+}
+
+/* Animation delays for AOS */
+[data-aos]:nth-child(2) { transition-delay: 100ms; }
+[data-aos]:nth-child(3) { transition-delay: 200ms; }
+[data-aos]:nth-child(4) { transition-delay: 300ms; }
+
+/* Navbar customization */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Footer social links */
+.footer a {
+    transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+/* Modal customization */
+.modal-content {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tech-stack {
+        gap: 0.25rem;
+    }
+    
+    .tech-stack .badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
